@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheDwarvenHalls", "TheDwarvenHalls\TheDwarvenHalls.csproj", "{EEF2E1BB-AF1C-46B8-BD8D-9312932AF088}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheDwarvenHalls.Server", "TheDwarvenHalls.Server\TheDwarvenHalls.Server.csproj", "{4E35B7DA-B619-45F2-B81B-E8925E936663}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EEF2E1BB-AF1C-46B8-BD8D-9312932AF088}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEF2E1BB-AF1C-46B8-BD8D-9312932AF088}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEF2E1BB-AF1C-46B8-BD8D-9312932AF088}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEF2E1BB-AF1C-46B8-BD8D-9312932AF088}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E35B7DA-B619-45F2-B81B-E8925E936663}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E35B7DA-B619-45F2-B81B-E8925E936663}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E35B7DA-B619-45F2-B81B-E8925E936663}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E35B7DA-B619-45F2-B81B-E8925E936663}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
