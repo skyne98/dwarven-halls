@@ -4,6 +4,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheDwarvenHalls", "TheDwarv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheDwarvenHalls.Server", "TheDwarvenHalls.Server\TheDwarvenHalls.Server.csproj", "{4E35B7DA-B619-45F2-B81B-E8925E936663}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheDwarvenHalls.Shared", "TheDwarvenHalls.Shared\TheDwarvenHalls.Shared.csproj", "{70FCD9BB-113A-4D7A-BB53-509CCE91A316}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leopotam.Ecs", "LeoECS\Leopotam.Ecs.csproj", "{0139B9CA-D97C-4463-BD51-2F3E1BC5074E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +22,13 @@ Global
 		{4E35B7DA-B619-45F2-B81B-E8925E936663}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E35B7DA-B619-45F2-B81B-E8925E936663}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E35B7DA-B619-45F2-B81B-E8925E936663}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70FCD9BB-113A-4D7A-BB53-509CCE91A316}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70FCD9BB-113A-4D7A-BB53-509CCE91A316}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70FCD9BB-113A-4D7A-BB53-509CCE91A316}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70FCD9BB-113A-4D7A-BB53-509CCE91A316}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0139B9CA-D97C-4463-BD51-2F3E1BC5074E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0139B9CA-D97C-4463-BD51-2F3E1BC5074E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0139B9CA-D97C-4463-BD51-2F3E1BC5074E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0139B9CA-D97C-4463-BD51-2F3E1BC5074E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

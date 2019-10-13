@@ -2,12 +2,15 @@
 
     <PropertyGroup>
         <OutputType>Exe</OutputType>
-        <TargetFramework>netcoreapp2.2</TargetFramework>
+        <TargetFramework>netcoreapp3.0</TargetFramework>
     </PropertyGroup>
 
     <ItemGroup>
       <PackageReference Include="MonoGame.Framework.DesktopGL.Core" Version="3.7.0.7" />
       <PackageReference Include="SadConsole" Version="8.8.1" />
+      <PackageReference Include="Serilog" Version="2.9.0-dev-01124" />
+      <PackageReference Include="Serilog.Sinks.Console" Version="3.1.2-dev-00824" />
+      <PackageReference Include="Serilog.Sinks.LiteDB.NetStandard" Version="1.0.14" />
     </ItemGroup>
 
 </Project>
