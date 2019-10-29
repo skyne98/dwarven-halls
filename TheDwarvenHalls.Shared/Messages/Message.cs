@@ -2,15 +2,18 @@
 using System.IO;
 using System.Linq;
 using ProtoBuf;
+using TheDwarvenHalls.Shared.Messages.Network;
 
 namespace TheDwarvenHalls.Shared.Messages
 {
     [ProtoContract]
-    public abstract class AMessage
+    [ProtoInclude(500, typeof(TestMessage))]
+    [ProtoInclude(501, typeof(AuthenticationMessage))]
+    public class Message
     {
         [ProtoMember(1)]
         public DateTime Time { get; set; }
-        
+
         // The basic message body type
         public byte[] Serialize()
         {
@@ -27,21 +30,21 @@ namespace TheDwarvenHalls.Shared.Messages
             return msgOut.Take(bytes).ToArray();
         }
 
-        public static T Deserialize<T>(byte[] message) where T: AMessage
+        public static T Deserialize<T>(byte[] message) where T: Message
         {
-            AMessage msgOut;
+            T msgOut;
 
             using (var stream = new MemoryStream(message))
             {
-                msgOut = Serializer.Deserialize<AMessage>(stream);
+                msgOut = Serializer.Deserialize<T>(stream);
             }
 
             return (T)msgOut;
         } 
         
-        public static AMessage Deserialize(byte[] message)
+        public static Message Deserialize(byte[] message)
         {
-            return Deserialize<AMessage>(message);
+            return Deserialize<Message>(message);
         }   
     }
 }

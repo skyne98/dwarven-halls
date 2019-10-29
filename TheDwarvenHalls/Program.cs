@@ -36,7 +36,7 @@ namespace TheDwarvenHalls
             startingConsole.Print(6, 5, "Hello from SadConsole", ColorAnsi.CyanBright);
         }
 
-        private static void Program_WindowResized(object sender, EventArgs e)
+        private static void Program_WindowResized(object? sender, EventArgs e)
         {
             Global.CurrentScreen.Resize(Global.WindowWidth / Global.CurrentScreen.Font.Size.X,
                 Global.WindowHeight / Global.CurrentScreen.Font.Size.Y, false);

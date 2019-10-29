@@ -2,8 +2,9 @@
 
     <PropertyGroup>
         <OutputType>Exe</OutputType>
-        <TargetFramework>netcoreapp3.0</TargetFramework>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
         <Nullable>enable</Nullable>
+        <LangVersion>8</LangVersion>
     </PropertyGroup>
 
     <ItemGroup>
@@ -13,6 +14,7 @@
       <PackageReference Include="Config.Net.Yaml" Version="4.13.7" />
       <PackageReference Include="Fleck" Version="1.1.0" />
       <PackageReference Include="LiteDB" Version="5.0.0-alpha" />
+      <PackageReference Include="Newtonsoft.Json" Version="12.0.3-beta2" />
       <PackageReference Include="Serilog" Version="2.9.0-dev-01124" />
       <PackageReference Include="Serilog.Sinks.Console" Version="3.1.2-dev-00824" />
       <PackageReference Include="Serilog.Sinks.LiteDB.NetStandard" Version="1.0.14" />
@@ -25,7 +27,15 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Systems" />
+      <Compile Remove="Systems\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Systems\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Systems\**" />
     </ItemGroup>
 
 </Project>

@@ -8,6 +8,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheDwarvenHalls.Shared", "T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leopotam.Ecs", "LeoECS\Leopotam.Ecs.csproj", "{0139B9CA-D97C-4463-BD51-2F3E1BC5074E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{6E5F36C5-8524-4283-B3B7-1D12413AA000}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheDwarvenHalls.Shared.Tests", "TheDwarvenHalls.Shared.Tests\TheDwarvenHalls.Shared.Tests.csproj", "{F4321937-FBB6-40C7-82F1-012EFB5131EB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +34,12 @@ Global
 		{0139B9CA-D97C-4463-BD51-2F3E1BC5074E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0139B9CA-D97C-4463-BD51-2F3E1BC5074E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0139B9CA-D97C-4463-BD51-2F3E1BC5074E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4321937-FBB6-40C7-82F1-012EFB5131EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4321937-FBB6-40C7-82F1-012EFB5131EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4321937-FBB6-40C7-82F1-012EFB5131EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4321937-FBB6-40C7-82F1-012EFB5131EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F4321937-FBB6-40C7-82F1-012EFB5131EB} = {6E5F36C5-8524-4283-B3B7-1D12413AA000}
 	EndGlobalSection
 EndGlobal

@@ -15,8 +15,8 @@ namespace TheDwarvenHalls.Server
     {
         private static void Main(string[] args)
         {
-            Parser.Default.ParseArguments<Options>(args)
-                .WithParsed<Options>(o =>
+            Parser.Default.ParseArguments<Configuration>(args)
+                .WithParsed<Configuration>(o =>
                 {
                     // Set up the logger
                     Log.Logger = new LoggerConfiguration()
@@ -47,28 +47,6 @@ namespace TheDwarvenHalls.Server
                     // Starting the world
                     var context = new Context();
                     var world = new World(context);
-
-                    for (int i = 0; i < 10; i++)
-                    {
-                        world.Update();   
-                    }
-
-                    var server = new WebSocketServer("ws://0.0.0.0:8181");
-                    server.Start(socket =>
-                    {
-                        socket.OnOpen = () =>
-                        {
-                            Log.Information($"Opened connection to {socket.ConnectionInfo.ClientIpAddress}:{socket.ConnectionInfo.ClientPort}");
-                        };
-                        socket.OnClose = () =>
-                        {
-                            Log.Information($"Closed connection to {socket.ConnectionInfo.ClientIpAddress}:{socket.ConnectionInfo.ClientPort}");
-                        };
-                        socket.OnBinary = message =>
-                        {
-                            
-                        };
-                    }); 
                 });
         }
     }

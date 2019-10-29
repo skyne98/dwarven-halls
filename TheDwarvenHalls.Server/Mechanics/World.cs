@@ -4,6 +4,7 @@ using Leopotam.Ecs;
 using Serilog;
 using SimpleInjector;
 using TheDwarvenHalls.Server.Database;
+using TheDwarvenHalls.Server.Network;
 using TheDwarvenHalls.Server.Services;
 
 namespace TheDwarvenHalls.Server.Mechanics
@@ -25,10 +26,10 @@ namespace TheDwarvenHalls.Server.Mechanics
 
             // CI
             _container = new Container();
-            _container.Register(() => this);
-            _container.Register(() => _world);
-            _container.Register(() => _systems);
-            _container.Register(() => _context);
+            _container.Register(() => this, Lifestyle.Singleton);
+            _container.Register(() => _world, Lifestyle.Singleton);
+            _container.Register(() => _systems, Lifestyle.Singleton);
+            _container.Register(() => _context, Lifestyle.Singleton);
             
             RegisterSystems();
             _systems.Initialize();
@@ -42,9 +43,12 @@ namespace TheDwarvenHalls.Server.Mechanics
             var toInstantiate = new List<Func<IEcsSystem>>
             {
                 RegisterSystem<TimeService>(),
+                RegisterSystem<ConfigurationService>(),
+                RegisterSystem<ServerService>()
             };
             
             toInstantiate.ForEach(factory => factory());
+            _container.Verify();
         }
 
         private Func<T> RegisterSystem<T>() where T: class, IEcsSystem
