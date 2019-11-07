@@ -15,4 +15,32 @@
       <PackageReference Include="Serilog.Sinks.LiteDB.NetStandard" Version="1.0.14" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Remove="Fonts\Kenney\Kenney.font" />
+      <Content Include="Fonts\Kenney\Kenney.font">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Fonts\Kenney\MonochromeTransparent.png" />
+      <Content Include="Fonts\Kenney\MonochromeTransparent.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Fonts\Kenney\CharactersTransparent.png" />
+      <Content Include="Fonts\Kenney\CharactersTransparent.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Fonts\Kenney\KenneyCharacters.font" />
+      <Content Include="Fonts\Kenney\KenneyCharacters.font">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Fonts\DwarfFortress\Cheepicus_16x16.png" />
+      <None Remove="Fonts\DwarfFortress\Cheepicus.font" />
+      <Content Include="Fonts\DwarfFortress\Cheepicus.font">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Fonts\DwarfFortress\Cheepicus_8x8x2.png" />
+      <Content Include="Fonts\DwarfFortress\Cheepicus_8x8x2.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
 </Project>

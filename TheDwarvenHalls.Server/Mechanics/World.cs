@@ -9,7 +9,7 @@ using TheDwarvenHalls.Server.Services;
 
 namespace TheDwarvenHalls.Server.Mechanics
 {
-    public class World
+    public class World: IDisposable
     {
         private readonly Context _context;
         private readonly EcsWorld _world;
@@ -67,9 +67,15 @@ namespace TheDwarvenHalls.Server.Mechanics
             };
         }
 
-        public void Update()
+        public void Run()
         {
             _systems.Run();
+        }
+
+        public void Dispose()
+        {
+            _context?.Dispose();
+            _container?.Dispose();
         }
     }
 }

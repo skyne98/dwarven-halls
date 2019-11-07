@@ -15,8 +15,8 @@ namespace TheDwarvenHalls.Server
     {
         private static void Main(string[] args)
         {
-            Parser.Default.ParseArguments<Configuration>(args)
-                .WithParsed<Configuration>(o =>
+            Parser.Default.ParseArguments<Arguments>(args)
+                .WithParsed<Arguments>(o =>
                 {
                     // Set up the logger
                     Log.Logger = new LoggerConfiguration()
@@ -46,7 +46,32 @@ namespace TheDwarvenHalls.Server
 
                     // Starting the world
                     var context = new Context();
-                    var world = new World(context);
+                    using (var world = new World(context))
+                    {
+                        string currentInput = String.Empty;
+                        while (true)  
+                        {  
+                            if (Console.KeyAvailable)
+                            {
+                                ConsoleKeyInfo key = Console.ReadKey(true);
+                                if (key.Key == ConsoleKey.Enter)
+                                {
+                                    if (currentInput == "exit")
+                                        break;
+                                    
+                                    currentInput = String.Empty;
+                                    Console.WriteLine();
+                                }
+                                else
+                                {
+                                    currentInput += key.KeyChar;
+                                    Console.Write(key.KeyChar);   
+                                }
+                            }  
+                            
+                            world.Run();
+                        }
+                    }
                 });
         }
     }
